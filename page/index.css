@@ -1,0 +1,11 @@
+@import url(../vendor/normalize.css);
+@import url(../blocks/header.css);
+
+.page{
+    max-width: 2500px;
+    margin: 0 auto;
+    align-items: center;
+    font-family: "Inter";
+    background-color: #000;
+    color: white;
+}
