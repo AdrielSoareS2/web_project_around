@@ -1,10 +1,13 @@
 @import url(../vendor/normalize.css);
 @import url(../blocks/header.css);
+@import url(../blocks/profile.css);
+@font-face {
+    font-family: "Inter";
+    src: url(../fonts/Inter-VariableFont_slnt\,wght.ttf);
+}
 
 .page{
-    max-width: 2500px;
     margin: 0 auto;
-    align-items: center;
     font-family: "Inter";
     background-color: #000;
     color: white;
