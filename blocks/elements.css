@@ -7,6 +7,9 @@
     row-gap: 20px;
     column-gap: 17px;
 }
+.elements__contanier{
+    list-style: none;
+}
 .elements__card{
     margin: 0;
     max-width: 282px;
