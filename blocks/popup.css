@@ -9,7 +9,7 @@
 }
 .popup_opened{
     display: block;
-    transition: opacity 0.20s;
+    transition: opacity 0.15s;
 }
 
 .popup__container{
@@ -22,12 +22,12 @@
     
 }
 
-.popup__image-zoom {
+.popup__image-zoom{
     height: 540px;
     width: 100%;
     object-fit: cover;
 }
-.popup__description-text {
+.popup__description-text{
     color: white;
     font-size: 12px;
     font-family: Inter;
@@ -38,10 +38,9 @@
     padding: 0;
     border: 0;
     cursor: pointer;
-    transition: opacity 0.20s;
+    transition: opacity 0.15s;
     width: 40px;
     height: 40px;
-    background-color: black;
     position: absolute;
     top: -40px;
     right: -40px;
