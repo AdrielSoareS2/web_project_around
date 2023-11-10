@@ -101,7 +101,7 @@ initialCards.forEach(addCard);
 const addPopupButton = document.querySelector(".profile__add-button");
 const inputTitle = document.querySelector(".popup__form-input_title");
 const inputImage = document.querySelector(".popup__form-input_link");
-const popupAdd = document.querySelector(".popup__add");
+const popupAdd = document.querySelector(".popup-add");
 const closePopupAddButton = document.querySelector(".popup-close");
 
 addPopupButton.addEventListener("click", () => {
