@@ -52,14 +52,21 @@
             <section class="popup">
                 <div class="popup__container">
                     <button type="button" class="popup__close-icon">
-                          <img src="images/Close-Icon2.png" alt="Botão de fechar" class="popup__close-icon-image">
+                        <img src="images/Close-Icon2.png" alt="Botão de fechar" class="popup__close-icon-image">
                     </button>
-                    <form class="popup__form">
-                        <h2 class="popup__title">Editar perfil</h2>
-                        <input class="popup__form-input popup__form-input_name" type="text" name="Nome">
-                        <input class="popup__form-input popup__form-input_about" type="text" name="Sobre mim">
+                    <form class="popup__form" novalidate>
+                        <fieldset class="popup__fieldset">
+                            <h2 class="popup__title">Editar perfil</h2>
+                            <input id="name-input" class="popup__form-input popup__form-input_name" type="text" name="Nome" minlength="2" maxlength="40" required >
+                            <span class="name-input-error popup__span"></span>
+                            
+                            
+                            <input id="about-ipunt" class="popup__form-input popup__form-input_about" type="text" name="Sobre mim" minlength="2" maxlength="200" required>
+                            <span class="about-ipunt-error popup__span"></span>
+                            
                         <button type="submit" class="popup__button-submit">Salvar</button>
                     </form>
+                </fieldset>
                 </div>
             </section>
 
@@ -68,11 +75,17 @@
                     <button type="button" class="popup__close-icon">
                         <img class="popup__close-icon-img popup-close" src="./images/close-icon.png" alt="ìcone para fechar o pop-up">
                     </button>
-                    <form class="popup__form popup__form_add">
-                        <h2 class="popup__title">Novo Local</h2>
-                        <input placeholder="Título" class="popup__form-input popup__form-input_title" name="name">
-                        <input placeholder="Link de imagem" class="popup__form-input popup__form-input_link" name="image">
-                        <button type="submit" class="popup__button-submit">Criar</button>
+                    <form class="popup__form popup__form_add" novalidate>
+                        <fieldset class="popup__fieldset">
+                            <h2 class="popup__title">Novo Local</h2>
+                            <input id="title-ipunt" type="text" placeholder="Título" class="popup__form-input popup__form-input_title" name="name" minlength="2" maxlength="30" required>
+                            <span class="title-ipunt-error popup__span"></span>
+
+                            <input id="url-ipunt" type="url" placeholder="Link de imagem" class="popup__form-input popup__form-input_link" name="image">
+                            <span class="url-ipunt-error popup__span"></span>
+                            
+                            <button type="submit" class="popup__button-submit">Criar</button>
+                        </fieldset>
                     </form>
                 </div>
             </section>
@@ -96,5 +109,6 @@
     </div>
 
     <script src="./script.js"></script>
+    <script src="./validate.js"></script>
 </body>
 </html>

@@ -82,7 +82,7 @@
 }
 
 .elements__button-like_active{
-    background-image: url(../images/Union.png);
+    background: url(https://practicum-content.s3.us-west-1.amazonaws.com/web-code/dom/moved_heart-filled.svg) center no-repeat;
     border: 0;
     background-color: white;
     width: 21px;
