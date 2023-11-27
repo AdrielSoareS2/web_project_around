@@ -6,9 +6,16 @@ const inputName = document.querySelector(".popup__form-input_name");
 const inputAbout = document.querySelector(".popup__form-input_about");
 const profileName = document.querySelector(".profile__name");
 const profileAbout = document.querySelector(".profile__job");
+const addPopupButton = document.querySelector(".profile__add-button");
+const inputTitle = document.querySelector(".popup__form-input_title");
+const inputImage = document.querySelector(".popup__form-input_link");
+const popupAdd = document.querySelector(".popup-add");
+const closePopupAddButton = document.querySelector(".popup-close");
 const cardName = document.querySelector(".elements__card-name");
 const cardImage = document.querySelector(".elements__card-img");
-const popupImage = document.querySelector(".popup_image");
+const popupImage = document.querySelector(".popup-image");
+
+
 
 
 editPopupButton.addEventListener("click", function () {
@@ -102,11 +109,7 @@ function addCard(cardData) {
 
 initialCards.forEach(addCard);
 
-const addPopupButton = document.querySelector(".profile__add-button");
-const inputTitle = document.querySelector(".popup__form-input_title");
-const inputImage = document.querySelector(".popup__form-input_link");
-const popupAdd = document.querySelector(".popup-add");
-const closePopupAddButton = document.querySelector(".popup-close");
+
 
 
 
