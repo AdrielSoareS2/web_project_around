@@ -110,9 +110,6 @@ function addCard(cardData) {
 initialCards.forEach(addCard);
 
 
-
-
-
 addPopupButton.addEventListener("click", () => {
   popupAdd.classList.add("popup_opened");
   inputTitle.value = "";

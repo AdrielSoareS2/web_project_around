@@ -1,9 +1,14 @@
-const showInputError = (formElement, inputElement, errorMessage) => {
+
+
+
+
+    const showInputError = (formElement, inputElement, errorMessage) => {
     const errorElement = formElement.querySelector(`.${inputElement.id}-error`);
     inputElement.classList.add("popup__input_type_error");
     errorElement.textContent = errorMessage;
     errorElement.classList.add("popup__error_visible");
   };
+  
   
   const hideInputError = (formElement, inputElement) => {
     const errorElement = formElement.querySelector(`.${inputElement.id}-error`);
@@ -11,7 +16,7 @@ const showInputError = (formElement, inputElement, errorMessage) => {
     errorElement.classList.remove("popup__error_visible");
     errorElement.textContent = "";
   };
-  
+
   const checkInputValidity = (formElement, inputElement) => {
     if (!inputElement.validity.valid) {
       showInputError(formElement, inputElement, inputElement.validationMessage);
@@ -22,10 +27,14 @@ const showInputError = (formElement, inputElement, errorMessage) => {
   
   const hasInvalidInput = (inputList) => {
     return inputList.some((inputElement) => {
-      return !inputElement.validity.valid;
+        
+    return !inputElement.validity.valid;
     });
   };
   
+  
+  
+
   const toggleButtonState = (inputList, buttonElement) => {
     if (hasInvalidInput(inputList)) {
       buttonElement.classList.add("popup__button_disabled");
@@ -66,9 +75,10 @@ const showInputError = (formElement, inputElement, errorMessage) => {
     formList.forEach((formElement) => {
       formElement.addEventListener("submit", (evt) => {
         evt.preventDefault();
+        
         if (
           !hasInvalidInput(
-            Array.from(formElement.querySelectorAll("popup__form-input"))
+            Array.from(formElement.querySelectorAll(".popup__form-input"))
           )
         ) {
           resetFormState(formElement);
@@ -86,9 +96,7 @@ const showInputError = (formElement, inputElement, errorMessage) => {
         }
       });
   
-      const fieldsetList = Array.from(
-        formElement.querySelectorAll(".popup__fieldset")
-      );
+      const fieldsetList = Array.from(formElement.querySelectorAll(".popup__set"));
   
       fieldsetList.forEach((fieldset) => {
         setEventListeners(fieldset);
@@ -96,15 +104,16 @@ const showInputError = (formElement, inputElement, errorMessage) => {
     });
   };
 
+  
 
 
-enableValidation({
+  enableValidation({
     formSelector: ".popup__form",
-    inputSelector: ".popup__input",
-    submitButtonSelector: ".popup__button",
+    inputSelector: ".popup__form-input",
+    submitButtonSelector: ".popup__button-submit",
     inactiveButtonClass: "popup__button_disabled",
     inputErrorClass: "popup__input_type_error",
-    errorClass: "popup__error_visible"
-  }); 
+    errorClass: "popup__error_visible",
+  });
 
 
